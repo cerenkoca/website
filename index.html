@@ -14,7 +14,6 @@
         }
 
         h1,
-        h2,
         h3,
         h4,
         h5,
@@ -22,6 +21,19 @@
         footer,
         ul li {
             mix-blend-mode: overlay;
+        }
+
+        h2 span {
+            font: inherit;
+            mix-blend-mode: overlay;
+
+        }
+
+        h2 span.program {
+            font: inherit;
+            font-weight: bold;
+            mix-blend-mode: normal;
+            /* animation: blink 1s ease-out alternate infinite forwards; */
         }
 
         a {
@@ -162,19 +174,9 @@
             }
         }
 
-        /* .rainbow::after {
-            animation: rainbow .5s ease-in-out alternate infinite forwards;
-        } */
-
-        h2 span {
-            font: inherit;
-            font-weight: bold;
-            /* animation: blink 1s ease-out alternate infinite forwards; */
-        }
-
         @media screen and (max-width: 600px) {
 
-            h1{
+            h1 {
                 font-size: 4em;
                 align-self: flex-start;
             }
@@ -214,8 +216,8 @@
         <div class="left person"></div>
         <div class="text">
             <h1>Ceren Koca</h1>
-            <h2>Currently completing my M.A. in <span class="program">Counselling&nbsp;Psychology</span> at Yorkville
-                University.
+            <h2><span>Currently completing my M.A. in </span><span
+                    class="program">Counselling&nbsp;Psychology</span><span> at Yorkville University.</span>
             </h2>
             <hr>
             <h3>Let's connect!</h3>
