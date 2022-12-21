@@ -13,6 +13,17 @@
             background: #00000033;
         }
 
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        footer,
+        ul li {
+            mix-blend-mode: overlay;
+        }
+
         a {
             color: inherit;
             text-decoration: none;
@@ -36,7 +47,6 @@
             list-style: none;
             width: 2em;
             height: 2em;
-            mix-blend-mode: overlay;
             margin: 0 1em 0 1em;
         }
 
@@ -71,6 +81,7 @@
             background: rgb(152, 238, 255);
             background: linear-gradient(135deg, rgba(152, 238, 255, 1) 0%, rgba(44, 103, 255, 1) 100%);
             background-color: rgb(59, 29, 7);
+            mix-blend-mode: normal;
         }
 
         body {
@@ -78,7 +89,31 @@
         }
 
         main {
-            padding: 2em;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        main div.left {
+            background: url("img/ceren.svg") no-repeat;
+            left: 0;
+        }
+        
+        main div.right {
+            background: url("img/patient.svg") no-repeat;
+            right: 0;
+        }
+
+        main div.person {
+            mix-blend-mode:soft-light;
+            background-position: bottom;
+            height: 100%;
+            width: 25%; 
+            margin: 0 2em;
+        }
+
+        main div.text {
             height: calc(100% - 4em);
             display: flex;
             flex-direction: column;
@@ -93,13 +128,14 @@
         }
 
         h1 {
-            font-weight: 300;
+            /* font-weight: 300; */
             font-size: 6rem;
             margin: 0;
             line-height: 1;
         }
 
         h2 {
+            line-height: 1.5;
             font-family: 'Times New Roman', Times, serif;
             font-style: italic;
             font-weight: 100;
@@ -111,7 +147,6 @@
         }
 
         hr {
-            /* border-bottom: 2px solid transparent; */
             border-image: linear-gradient(0.25turn, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
             border-image-slice: 1;
             border-top: none;
@@ -120,13 +155,13 @@
             width: 100%;
         }
 
-        @keyframes rainbow {
+        @keyframes blink {
             0% {
-                /* content: "hey"; */
+                opacity: .6;
             }
 
             100% {
-                /* content: "hi"; */
+                opacity: 1;
             }
         }
 
@@ -134,8 +169,10 @@
             animation: rainbow .5s ease-in-out alternate infinite forwards;
         } */
 
-        h2 span.rainbow {
+        h2 span {
             font: inherit;
+            font-weight: bold;
+            /* animation: blink 1s ease-out alternate infinite forwards; */
         }
 
         @media screen and (max-width: 600px) {
@@ -144,11 +181,18 @@
             ul.contact {
                 align-self: flex-start;
             }
+            main div.person {
+                position: absolute;
+                bottom: 3em;
+            }
+
+            main div.text {
+                padding: 2em 2em 10em 2em;
+            }
         }
 
         footer {
             opacity: 0.8;
-            mix-blend-mode: overlay;
             position: fixed;
             bottom: 0;
             text-align: center;
@@ -162,22 +206,27 @@
 
 <body>
     <main>
-        <h1>Ceren Koca</h1>
-        <h2>Currently completing my M.A. in <span class="rainbow">Counselling Psychology</span> at Yorkville University.
-        </h2>
-        <hr>
-        <h3>Let's connect!</h3>
-        <ul class="contact">
-            <li class="email">
-                <a target="_blank" href="mailto:cerenkoca25@gmail.com"></a>
-            </li>
-            <li class="linkedin">
-                <a target="_blank" href="https://www.linkedin.com/in/ceren-koca/"></a>
-            </li>
-            <li class="twitter">
-                <a target="_blank" href="https://twitter.com/CerenPsych"></a>
-            </li>
-        </ul>
+        <div class="left person"></div>
+        <div class="text">
+            <h1>Ceren Koca</h1>
+            <h2>Currently completing my M.A. in <br><span class="program">Counselling Psychology</span> at Yorkville
+                University.
+            </h2>
+            <hr>
+            <h3>Let's connect!</h3>
+            <ul class="contact">
+                <li class="email">
+                    <a target="_blank" href="mailto:cerenkoca25@gmail.com"></a>
+                </li>
+                <li class="linkedin">
+                    <a target="_blank" href="https://www.linkedin.com/in/ceren-koca/"></a>
+                </li>
+                <li class="twitter">
+                    <a target="_blank" href="https://twitter.com/CerenPsych/"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="right person"></div>
     </main>
     <footer>
         Ceren Koca &copy; 2022 &#124; Coded by <a class="omer" href="https://omer.ca/">Omer Landau</a>
