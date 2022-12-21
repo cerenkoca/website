@@ -77,10 +77,8 @@
         }
 
         html {
-            overflow: hidden;
-            background: rgb(152, 238, 255);
+            background: rgba(44, 103, 255, 1);
             background: linear-gradient(135deg, rgba(152, 238, 255, 1) 0%, rgba(44, 103, 255, 1) 100%);
-            background-color: rgb(59, 29, 7);
             mix-blend-mode: normal;
         }
 
@@ -99,22 +97,21 @@
             background: url("img/ceren.svg") no-repeat;
             left: 0;
         }
-        
+
         main div.right {
             background: url("img/patient.svg") no-repeat;
             right: 0;
         }
 
         main div.person {
-            mix-blend-mode:soft-light;
+            mix-blend-mode: soft-light;
             background-position: bottom;
             height: 100%;
-            width: 25%; 
+            width: 25%;
             margin: 0 2em;
         }
 
         main div.text {
-            height: calc(100% - 4em);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -181,13 +178,16 @@
             ul.contact {
                 align-self: flex-start;
             }
+
             main div.person {
                 position: absolute;
                 bottom: 3em;
             }
 
             main div.text {
-                padding: 2em 2em 10em 2em;
+                padding: 5em 1em;
+                top: 0;
+                position: absolute;
             }
         }
 
