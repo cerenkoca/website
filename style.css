@@ -162,7 +162,7 @@ main section {
 
 main section.landing {
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
     justify-content: center;
 }
 
@@ -190,6 +190,7 @@ div.text {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    align-self: center;
 }
 
 div.text ul {
