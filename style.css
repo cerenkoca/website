@@ -191,6 +191,10 @@ div.text {
     align-items: center;
 }
 
+div.text ul {
+    mix-blend-mode: overlay;
+}
+
 .text h1, .text h2, .person {
     animation: dropIn 1s;
     opacity: 0;
@@ -204,7 +208,7 @@ div.text {
     animation-fill-mode: forwards;
 }
 
-div.text h1, div.text h3, div.text ul {
+div.text h1, div.text h3, div.text ul, nav {
     opacity: 0;
     animation: fadeIn 1s;
     animation-delay: 1s;
