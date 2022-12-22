@@ -270,12 +270,19 @@ hr {
 @media screen and (max-width: 610px) {
 
     main section.about {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 0 2em;
+    }
+
+    main section.about div.portrait {
+        padding: 2em 0 !important;
     }
 
     main section.about div {
         flex-direction: column !important;
-        padding: 4em 0 !important;
+        padding: 0 !important;
     }
 
     nav {
