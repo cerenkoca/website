@@ -19,10 +19,10 @@ main section.landing ul li {
 
 main section.about {
     display: flex;
-    justify-content: left;
     align-items: center;
     margin: 0 4em;
-    
+
+
 }
 
 main section.about div h1 {
@@ -32,7 +32,6 @@ main section.about div h1 {
 main section.about div {
     width: 100%;
     padding: 0 4em;
-    height: 80%;
 }
 
 main section.about div img {
@@ -269,6 +268,15 @@ hr {
 }
 
 @media screen and (max-width: 610px) {
+
+    main section.about {
+        display: block;
+    }
+
+    main section.about div {
+        flex-direction: column !important;
+        padding: 4em 0 !important;
+    }
 
     nav {
         position: sticky;
