@@ -60,22 +60,17 @@ nav {
     justify-content: space-between;
     position: sticky;
     top: 0;
-    height: 1em;
     border-bottom-left-radius: 1em;
     border-bottom-right-radius: 1em;
-    border-bottom: #000 1px solid;
     backdrop-filter: blur(10px) !important;
     background: #ffffff99;
     box-shadow: 0 0 1em .5em #00000022;
-    /* animation: boxShadow 1s linear forwards; */
 }
 
 nav>a {
     font-weight: bold;
     text-transform: uppercase;
-    align-self: center;
-    color: #000;
-    /* text-shadow:2px 2px 5px #00000033, -2px -2px 5px #00000033; */
+    color: #195aae;
 }
 
 @keyframes unfold {
@@ -116,8 +111,9 @@ ul#drawer.openned>li {
     background: #ffffff99;
     padding: 1em !important;
     font-weight: bold;
-    border-top:1px solid black;
-    border-bottom:1px solid black;
+    border-top:1px solid #00000033;
+    border-bottom:1px solid #00000033;
+    backdrop-filter: hue-rotate(180deg) !important;
 }
 
 ul#drawer.openned>li:first-child {
@@ -129,8 +125,7 @@ ul#drawer.openned>li:last-child {
 }
 
 nav ul {
-    transition: 600ms linear forwards;
-    height: 0;
+    /* height: 0; */
     display: flex;
     list-style: none;
     margin: 0;
@@ -260,6 +255,7 @@ hr {
 
     nav>a#burger {
         display: block !important;
+        line-height: .4;
     }
 
     h1 {
