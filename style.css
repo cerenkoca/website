@@ -255,6 +255,7 @@ hr {
 
     nav>ul {
         display: none;
+        text-align: center;
     }
 
     nav>a#burger {
