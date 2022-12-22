@@ -192,12 +192,13 @@ div.text {
 }
 
 div.text ul {
+    opacity: 0;
     mix-blend-mode: overlay;
 }
 
 .text h1, .text h2, .person {
-    animation: dropIn 1s;
     opacity: 0;
+    animation: dropIn 1s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
 }
