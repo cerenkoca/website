@@ -4,244 +4,58 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
     <meta name="theme-color" content="rgb(44, 103, 255)">
-    <style>
-        * {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            color: white;
-        }
-
-        ::selection {
-            background: #00000033;
-        }
-
-        h1,
-        h3,
-        h4,
-        h5,
-        h6,
-        footer,
-        ul li {
-            mix-blend-mode: overlay;
-        }
-
-        h2 span {
-            font: inherit;
-            mix-blend-mode: overlay;
-
-        }
-
-        h2 span.program {
-            font: inherit;
-            font-weight: bold;
-            mix-blend-mode: normal;
-            /* animation: blink 1s ease-out alternate infinite forwards; */
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        a:hover,
-        li:hover {
-            mix-blend-mode: normal !important;
-            text-decoration: underline;
-            transition: .3s ease-out;
-        }
-
-        ul.contact {
-            margin: 0;
-            margin-top: 1em;
-            padding: 0;
-            display: flex;
-        }
-
-        ul.contact li {
-            list-style: none;
-            width: 2em;
-            height: 2em;
-            margin: 0 1em 0 1em;
-        }
-
-        ul.contact li:first-child {
-            margin-left: 0;
-        }
-
-        ul.contact li:last-child {
-            margin-right: 0;
-        }
-
-        ul.contact li a {
-            display: block;
-            border-radius: 1em;
-            height: 100%;
-        }
-
-        ul.contact li.linkedin {
-            background-image: url("img/linkedin.svg");
-        }
-
-        ul.contact li.twitter {
-            background-image: url("img/twitter.svg");
-        }
-
-        ul.contact li.email {
-            background-image: url("img/email.svg");
-        }
-
-        html {
-            background: rgba(44, 103, 255, 1);
-            background: linear-gradient(135deg, rgb(152, 238, 255) 0%, rgb(44, 103, 255) 100%);
-            mix-blend-mode: normal;
-        }
-
-        body {
-            margin: 0;
-        }
-
-        main {
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        main div.left {
-            background: url("img/ceren.svg") no-repeat;
-            left: 0;
-        }
-
-        main div.right {
-            background: url("img/patient.svg") no-repeat;
-            right: 0;
-        }
-
-        main div.person {
-            mix-blend-mode: soft-light;
-            background-position: bottom;
-            height: 100%;
-            width: 25%;
-            margin: 0 2em;
-            user-select: none;
-        }
-
-        main div.text {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        h1,
-        h2,
-        h3 {
-            text-shadow: #00000066 3px 3px 10px;
-        }
-
-        h1 {
-            /* font-weight: 300; */
-            font-size: 6em;
-            margin: 0;
-            line-height: 1;
-        }
-
-        h2 {
-            line-height: 1.5;
-            font-family: 'Times New Roman', Times, serif;
-            font-style: italic;
-            font-weight: 100;
-
-        }
-
-        h3 {
-            font-weight: 300;
-            margin-bottom: 0;
-        }
-
-        hr {
-            border-image: linear-gradient(0.25turn, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
-            border-image-slice: 1;
-            border-top: none;
-            border-left: none;
-            border-right: none;
-            width: 100%;
-        }
-
-        @keyframes blink {
-            0% {
-                opacity: .6;
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
-
-        @media screen and (max-width: 600px) {
-
-            h1 {
-                font-size: 4em;
-                align-self: flex-start;
-            }
-
-            h3,
-            ul.contact {
-                align-self: flex-start;
-            }
-
-            main div.person {
-                position: absolute;
-                bottom: 3em;
-            }
-
-            main div.text {
-                padding: 2em;
-                top: 0;
-                position: absolute;
-            }
-        }
-
-        footer {
-            opacity: 0.8;
-            position: fixed;
-            bottom: 0;
-            text-align: center;
-            width: 100%;
-            padding: 1em 0;
-            font-weight: 100;
-            font-size: .75em;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <nav>
+        <a href="https://cerenko.ca/">Ceren Koca</a>
+        <a role="button" onclick="mobileMenu()" id="burger">&#x2630;</a>
+        <ul id="drawer">
+            <li>
+                About
+            </li>
+            <li>
+                Contact
+            </li>
+            <li>
+                Services &amp; Fees
+            </li>
+        </ul>
+    </nav>
     <main>
-        <div class="left person"></div>
-        <div class="text">
-            <h1>Ceren Koca</h1>
-            <h2><span>Currently completing my M.A. in </span><span
-                    class="program">Counselling&nbsp;Psychology</span><span> at Yorkville University.</span>
-            </h2>
-            <hr>
-            <h3>Let's connect!</h3>
-            <ul class="contact">
-                <li class="email">
-                    <a target="_blank" href="mailto:cerenkoca25@gmail.com"></a>
-                </li>
-                <li class="linkedin">
-                    <a target="_blank" href="https://www.linkedin.com/in/ceren-koca/"></a>
-                </li>
-                <li class="twitter">
-                    <a target="_blank" href="https://twitter.com/CerenPsych/"></a>
-                </li>
-            </ul>
-        </div>
-        <div class="right person"></div>
+        <section class="landing">
+            <div class="left person"></div>
+            <div class="text">
+                <h1>Ceren Koca</h1>
+                <h2><span>Currently completing my M.A. in </span><span
+                        class="program">Counselling&nbsp;Psychology</span><span> at Yorkville University.</span>
+                </h2>
+                <hr>
+                <h3>Let's connect!</h3>
+                <ul class="contact">
+                    <li class="email">
+                        <a target="_blank" href="mailto:cerenkoca25@gmail.com"></a>
+                    </li>
+                    <li class="linkedin">
+                        <a target="_blank" href="https://www.linkedin.com/in/ceren-koca/"></a>
+                    </li>
+                    <li class="twitter">
+                        <a target="_blank" href="https://twitter.com/CerenPsych/"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="right person"></div>
+        </section>
+        <section>
+            test
+        </section>
     </main>
     <footer>
         Ceren Koca &copy; 2022 &emsp;&#124;&emsp; Coded by <a target="_blank" class="omer" href="https://omer.ca/">Omer
             Landau</a>
     </footer>
+    <script rel="script" src="script.js"></script>
 </body>
 
 </html>
