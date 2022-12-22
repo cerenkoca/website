@@ -74,6 +74,7 @@ body {
 }
 
 nav {
+    backdrop-filter: blur(5px);
     position: sticky;
     top: 0;
     padding: 1em 6em;
@@ -271,6 +272,7 @@ hr {
 
     main section.about {
         display: flex;
+        height: auto;
         flex-direction: column;
         justify-content: flex-start;
         margin: 0 2em;
@@ -376,6 +378,7 @@ ul.contact li.email {
 }
 
 footer {
+    backdrop-filter: blur(5px);
     display: flex;
     position: fixed;
     bottom: 0;
