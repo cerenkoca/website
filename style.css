@@ -312,7 +312,7 @@ hr {
 
     h3,
     ul.contact {
-        align-self: flex-start;
+        /* align-self: flex-start; */
     }
 
     div.person {
@@ -383,4 +383,8 @@ footer {
     padding: 1em 0;
     font-weight: 100;
     font-size: .75em;
+}
+
+footer span {
+    width: 33.3333333%;
 }
