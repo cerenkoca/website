@@ -101,7 +101,7 @@ nav ul#drawer.openned {
     position: fixed;
     top: calc(3em + 3px);
     left: 0;
-    
+
 }
 
 ul#drawer.openned>li {
@@ -215,7 +215,8 @@ div.text ul {
 div.text h1,
 div.text h3,
 div.text ul,
-nav {
+nav,
+footer {
     opacity: 0;
     animation: fadeIn 1s;
     animation-delay: 1s;
@@ -258,21 +259,23 @@ h3 {
 }
 
 hr {
+    animation: stretch 1s linear forwards;
+    animation-delay: 1s;
     border-image: linear-gradient(0.25turn, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
     border-image-slice: 1;
     border-top: none;
     border-left: none;
     border-right: none;
-    width: 100%;
+    width: 0;
 }
 
-@keyframes blink {
+@keyframes stretch {
     0% {
-        opacity: .6;
+        width: 0;
     }
 
     100% {
-        opacity: 1;
+        width: 100%;
     }
 }
 
@@ -375,7 +378,7 @@ ul.contact li.email {
 }
 
 footer {
-    opacity: 0.8;
+    display: flex;
     position: fixed;
     bottom: 0;
     text-align: center;
@@ -385,6 +388,16 @@ footer {
     font-size: .75em;
 }
 
-footer span {
-    width: 33.3333333%;
+footer span:first-child {
+    text-align: right;
+    width: 49%;
+}
+
+footer span:nth-child(2) {
+    padding: 0 1%;
+}
+
+footer span:last-child {
+    text-align: left;
+    width: 49%;
 }
