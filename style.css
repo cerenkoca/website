@@ -12,7 +12,6 @@ h3,
 h4,
 h5,
 h6,
-footer,
 main section.landing ul li {
     mix-blend-mode: overlay;
 }
@@ -75,6 +74,7 @@ body {
 
 nav {
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     position: sticky;
     top: 0;
     padding: 1em 6em;
@@ -107,6 +107,7 @@ nav ul#drawer.openned {
 ul#drawer.openned>li {
     background: #ffffff99;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 1em !important;
     font-weight: bold;
     border-top: 1px solid #00000033;
@@ -379,6 +380,7 @@ ul.contact li.email {
 
 footer {
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     display: flex;
     position: fixed;
     bottom: 0;
