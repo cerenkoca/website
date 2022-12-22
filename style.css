@@ -17,6 +17,28 @@ main section.landing ul li {
     mix-blend-mode: overlay;
 }
 
+main section.about {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 0 4em;
+    
+}
+
+main section.about div h1 {
+    font-size: 2em;
+}
+
+main section.about div {
+    width: 100%;
+    padding: 0 4em;
+    height: 80%;
+}
+
+main section.about div img {
+    width: 100%;
+}
+
 h2 span {
     font: inherit;
     mix-blend-mode: overlay;
@@ -40,28 +62,6 @@ li:hover {
     mix-blend-mode: normal !important;
     text-decoration: underline;
     transition: .3s ease-out;
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-
-}
-
-@keyframes dropIn {
-    0% {
-        transform: translateY(-50px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-
 }
 
 html {
@@ -194,14 +194,12 @@ div.text {
 }
 
 div.text ul {
-    opacity: 0;
     mix-blend-mode: overlay;
 }
 
 .text h1,
 .text h2,
 .person {
-    opacity: 0;
     animation: dropIn 1s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
@@ -219,7 +217,6 @@ div.text h3,
 div.text ul,
 nav,
 footer {
-    opacity: 0;
     animation: fadeIn 1s;
     animation-delay: 1s;
     animation-timing-function: ease-in-out;
@@ -269,22 +266,6 @@ hr {
     border-left: none;
     border-right: none;
     width: 0;
-}
-
-@keyframes stretch {
-    0% {
-        width: 0;
-    }
-
-    100% {
-        width: 100%;
-    }
-}
-
-@media screen and (max-height: 610px) {
-    div.person {
-        display: none;
-    }
 }
 
 @media screen and (max-width: 610px) {
